@@ -1,0 +1,7 @@
+{
+    "name": "super-mailchimp-signup",
+    "type": "project",
+    "require": {
+        "drewm/mailchimp-api": "^1.1"
+    }
+}
