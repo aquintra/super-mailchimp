@@ -133,7 +133,7 @@ class Super_Mailchimp_Public {
 		$error_message = ($lang == 'sv' ? 'Något gick fel' : 'Noe gikk galt');
 		$terms_label = ($lang == 'sv' ? 'Terms text' : 'Terms text');
 		$submit_text = 'OK';
-        $email_placeholder = ($lang == 'sv' ? 'Din e-postadress' : 'Din epostadresse');
+        $email_placeholder = ($lang == 'sv' ? 'Din e-postadress' : 'Din epost');
     
         $terms_link = ($data['terms_link'] ? $data['terms_link'] : '/');
 
