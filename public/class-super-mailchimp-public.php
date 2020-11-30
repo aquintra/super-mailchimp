@@ -128,7 +128,7 @@ class Super_Mailchimp_Public {
         $lang = $data['selected_lang'];
 
 		// Strings TODO: Make translateble
-        $success_message = ($lang == 'sv' ? 'Tack! Du prenumenerar nu på vårat nyhetsbrev' : 'Takk! Du abonnerer nå på vårt nyhetsbrev');
+        $success_message = ($lang == 'sv' ? 'Tack! Du prenumenerar nu på vårat nyhetsbrev' : 'Takk! Du er nå med på Pollsplace liste');
 		$invalid_message = ($lang == 'sv' ? 'Det måste vara en riktigt e-postadress' : 'Det må være en ekte e-postadresse');
 		$error_message = ($lang == 'sv' ? 'Något gick fel' : 'Noe gikk galt');
 		$terms_label = ($lang == 'sv' ? 'Terms text' : 'Terms text');
