@@ -124,16 +124,18 @@ class Super_Mailchimp_Public {
 
 	public function mailchimp_shortcode() {
 		$settings = shortcode_atts([], $atts);
-		$data = $this->mailchimp_get_data();
+        $data = $this->mailchimp_get_data();
+        $lang = $data['selected_lang'];
 
 		// Strings TODO: Make translateble
-		$success_message = 'Tack! Du prenumenerar nu på vårat nyhetsbrev';
-		$invalid_message = 'Det måste vara en riktigt e-postadress';
-		$error_message = 'Något gick fel';
-		$terms_label = 'Terms text';
-		$terms_link = '/användarvillkor';
+        $success_message = ($lang == 'sv' ? 'Tack! Du prenumenerar nu på vårat nyhetsbrev' : 'Takk! Du abonnerer nå på vårt nyhetsbrev');
+		$invalid_message = ($lang == 'sv' ? 'Det måste vara en riktigt e-postadress' : 'Det må være en ekte e-postadresse');
+		$error_message = ($lang == 'sv' ? 'Något gick fel' : 'Noe gikk galt');
+		$terms_label = ($lang == 'sv' ? 'Terms text' : 'Terms text');
 		$submit_text = 'OK';
-		$email_placeholder = 'Din e-postadress';
+        $email_placeholder = ($lang == 'sv' ? 'Din e-postadress' : 'Din epostadresse');
+    
+        $terms_link = ($data['terms_link'] ? $data['terms_link'] : '/');
 
 		if (!empty($data)) {
 			return '

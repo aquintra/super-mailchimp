@@ -13,6 +13,11 @@
  */
 
 $data = $this->mailchimp_get_meta_data();
+
+$available_languages = array(
+    'no',
+    'sv',
+);
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
@@ -64,7 +69,36 @@ $data = $this->mailchimp_get_meta_data();
                  </tr>
         	</tbody>
         </table>
-                
+
+        <h3 class="title">Other</h3>
+        
+    	<table class="form-table">
+        	<tbody>
+                 <tr>
+        			<th><?php _e('Language:'); ?></th>
+        			<td>
+                        <select name="selected_lang">
+                            <option value="-1" selected>Select a language...</option>
+
+                            <?php if (isset($available_languages)) : ?>
+                                <?php foreach ($available_languages as $lang) : ?>
+                                    <option
+                                        value="<?php echo $lang; ?>"
+                                        <?php echo ($data['selected_lang'] === $lang ? 'selected' : ''); ?>
+                                    >
+                                        <?php echo $lang; ?>
+                                    </option>
+                                <?php endforeach; ?>                                        
+                            <?php endif; ?>
+                        </select>
+                    </td>
+        		</tr>
+                <tr>
+        			<th><?php _e('Terms Link:'); ?></th>
+        			<td><input class="regular-text" type="text" name="terms_link" value="<?php echo (isset($data['terms_link']) ? $data['terms_link'] : ''); ?>"></td>
+        		</tr>
+        	</tbody>
+        </table>
         <hr>
     	<br>
         <input class="button button-primary" type="submit" name="Submit" value="<?php _e('Update Options'); ?>" />
