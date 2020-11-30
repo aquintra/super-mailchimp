@@ -141,7 +141,7 @@ class Super_Mailchimp_Public {
 			return '
 				<div class="mailchimp-newsletter">				
 					<div class="mailchimp-newsletter__form-wrapper mailchimp-newsletter__form-wrapper--active fn-form-wrapper">	
-						<form class="mailchimp-newsletter__form-wrapper__form fn-adeprimo-mailchimp-submit" method="post">
+						<form class="mailchimp-newsletter__form-wrapper__form fn-super-mailchimp-submit" method="post">
 							<input type="hidden" name="mailchimp_newsletter_ajax_nonce" value="' . wp_create_nonce('mailchimp_newsletter_form_nonce') . '">
 							<input type="email" class="mailchimp-newsletter__form-wrapper__form__input fn-email" placeholder="' . $email_placeholder . '">
 
