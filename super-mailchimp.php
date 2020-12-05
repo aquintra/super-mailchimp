@@ -64,6 +64,18 @@ register_deactivation_hook( __FILE__, 'deactivate_super_mailchimp' );
  */
 require plugin_dir_path( __FILE__ ) . 'includes/class-super-mailchimp.php';
 
+require 'plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/aquintra/super-mailchimp',
+	__FILE__,
+	'super-mailchimp'
+);
+
+//Optional: If you're using a private repository, specify the access token like this:
+$myUpdateChecker->setAuthentication('592c6838e9a2be78af3b3f7cbe1858de87d58444');
+//Optional: Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('master');
+
 /**
  * Begins execution of the plugin.
  *
