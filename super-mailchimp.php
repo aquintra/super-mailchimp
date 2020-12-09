@@ -15,8 +15,8 @@
  * @wordpress-plugin
  * Plugin Name:       Super Mailchimp Signup
  * Plugin URI:        https://anderskristo.me/plugins/super-mailchimp-signup
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.2.4
+ * Description:       This plugin uses Mailchimp to display a Signup Form
+ * Version:           1.2.5
  * Author:            Anders Kristoffersson
  * Author URI:        https://anderskristo.me
  * License:           GPL-2.0+
@@ -88,9 +88,9 @@ $myUpdateChecker->setBranch('main');
 function run_super_mailchimp() {
 
 	$plugin = new Super_Mailchimp();
-	$plugin->run();
-	
-	require_once plugin_dir_path(__FILE__) . 'vendor/autoload.php';
+    $plugin->run();
+    
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-super-mailchimp-api.php';
 
 }
 run_super_mailchimp();
