@@ -16,7 +16,7 @@
  * Plugin Name:       Super Mailchimp Signup
  * Plugin URI:        https://anderskristo.me/plugins/super-mailchimp-signup
  * Description:       This plugin uses Mailchimp to display a Signup Form
- * Version:           1.2.5
+ * Version:           1.0.0
  * Author:            Anders Kristoffersson
  * Author URI:        https://anderskristo.me
  * License:           GPL-2.0+
@@ -63,18 +63,6 @@ register_deactivation_hook( __FILE__, 'deactivate_super_mailchimp' );
  * admin-specific hooks, and public-facing site hooks.
  */
 require plugin_dir_path( __FILE__ ) . 'includes/class-super-mailchimp.php';
-
-require 'plugin-update-checker/plugin-update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/aquintra/super-mailchimp',
-	__FILE__,
-	'super-mailchimp'
-);
-
-//Optional: If you're using a private repository, specify the access token like this:
-$myUpdateChecker->setAuthentication('592c6838e9a2be78af3b3f7cbe1858de87d58444');
-//Optional: Set the branch that contains the stable release.
-$myUpdateChecker->setBranch('main');
 
 /**
  * Begins execution of the plugin.
