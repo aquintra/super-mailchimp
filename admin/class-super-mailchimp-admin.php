@@ -181,7 +181,7 @@ class Super_Mailchimp_Admin {
 		$saved_data = $this->mailchimp_get_meta_data();
 
 		if (!empty($saved_data) && isset($saved_data['api_key'])) {
-			$MailChimp = new \Drewm\MailChimp($saved_data['api_key']);
+			$MailChimp = new \SuperMC\MailChimp($saved_data['api_key']);
 			return @$MailChimp->call('lists/list');
 		}
 

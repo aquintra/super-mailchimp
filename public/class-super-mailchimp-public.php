@@ -200,7 +200,7 @@ class Super_Mailchimp_Public {
 				$list_id = $saved_data['selected_list'];
 				$api_key = $saved_data['api_key'];
 
-				$MailChimp = new \Drewm\MailChimp($api_key);
+				$MailChimp = new \SuperMC\MailChimp($api_key);
 	
 				$result = $MailChimp->call('lists/subscribe', array(
 					'id'                => $list_id,
