@@ -19,8 +19,8 @@ Mailchimp is a newsletter service that allows you to send out email campaigns to
 
 This plugin allwos you to have your visitor sign up to a selected list in your Mailchimp account.
 
-This plugin is dependent on [Mailchimp](https://mailchimp.com/legal/)
-If you are not yet using Mailchimp [you can create an account here.](https://login.mailchimp.com/signup/).
+This plugin is dependent on Mailchimp: https://mailchimp.com/legal/
+If you are not yet using Mailchimp you can create an account here: https://login.mailchimp.com/signup/.
 
 == Installation ==
 
