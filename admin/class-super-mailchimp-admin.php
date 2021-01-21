@@ -138,10 +138,10 @@ class Super_Mailchimp_Admin {
 
 			$selected_list = 'selected_list';
 
-            $saved_meta['api_key'] = $_POST['mailchimp_api_key'];
-            $saved_meta['selected_lang'] = $_POST['selected_lang'];
-            $saved_meta['selected_list'] = $_POST[$selected_list];
-            $saved_meta['terms_link'] = $_POST['terms_link'];
+            $saved_meta['api_key'] = sanitize_text_field($_POST['mailchimp_api_key']);
+            $saved_meta['selected_lang'] = sanitize_text_field($_POST['selected_lang']);
+            $saved_meta['selected_list'] = sanitize_text_field($_POST[$selected_list]);
+            $saved_meta['terms_link'] = sanitize_text_field($_POST['terms_link']);
 
 			update_option('mailchimp_meta', serialize($saved_meta));
 
