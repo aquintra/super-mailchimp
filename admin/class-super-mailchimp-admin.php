@@ -106,7 +106,7 @@ class Super_Mailchimp_Admin {
 	 */
 	
 	public function add_admin_menu() {
-		add_menu_page('Mailchimp', 'Mailchimp', 'manage_options', $this->plugin_name, array($this, 'display_main_setting_page'), 'dashicons-email', 100);
+		add_menu_page('Mailchimp Signup', 'Mailchimp Signup', 'manage_options', $this->plugin_name, array($this, 'display_main_setting_page'), 'dashicons-email', 100);
 	}
 
 	/**
