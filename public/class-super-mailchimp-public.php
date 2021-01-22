@@ -192,7 +192,7 @@ class Super_Mailchimp_Public {
 	public function mailchimp_ajax_callback() {
 		if (isset($_POST['mailchimp_newsletter_ajax_nonce']) && wp_verify_nonce($_POST['mailchimp_newsletter_ajax_nonce'], 'mailchimp_newsletter_form_nonce')) {
 			$saved_data = $this->mailchimp_get_data();
-			$email = isset($_POST['email']) ? $_POST['email'] : false;
+			$email = isset($_POST['email']) ? sanitize_email($_POST['email']) : false;
 			
 			$response = array('success' => false);
 
