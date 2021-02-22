@@ -16,7 +16,7 @@
  * Plugin Name:       Super Mailchimp Signup
  * Plugin URI:        https://anderskristo.me/plugins/super-mailchimp-signup
  * Description:       This plugin uses Mailchimp to display a Signup Form
- * Version:           1.2.5
+ * Version:           1.2.6
  * Author:            Anders Kristoffersson
  * Author URI:        https://anderskristo.me
  * License:           GPL-2.0+

@@ -134,6 +134,8 @@ class Super_Mailchimp_Public {
 		$terms_label = ($lang == 'sv' ? 'Terms text' : 'Terms text');
 		$submit_text = 'OK';
         $email_placeholder = ($lang == 'sv' ? 'Din e-postadress' : 'Din e-post');
+		$adding_text = ($lang == 'sv' ? 'Lägger till' : 'Legger til');
+		$email_correct = ($lang == 'sv' ? 'Är denna e-post korrekt?' : 'Er denne e-post adressen riktig?');
     
         $terms_link = ($data['terms_link'] ? $data['terms_link'] : '/');
 
@@ -159,7 +161,7 @@ class Super_Mailchimp_Public {
 		
 					<div class="mailchimp-newsletter__confirm-wrapper fn-confirm-wrapper">
 						<div class="mailchimp-newsletter__confirm-wrapper__inner">
-							<p class="mailchimp-newsletter__confirm-wrapper__inner__desc">Är denna e-post korrekt?</p>
+							<p class="mailchimp-newsletter__confirm-wrapper__inner__desc">' . $email_correct . '</p>
 							<p class="mailchimp-newsletter__confirm-wrapper__inner__email fn-email-holder"></p>
 							
 							<div class="mailchimp-newsletter__confirm-wrapper__inner__form-footer">
@@ -170,7 +172,7 @@ class Super_Mailchimp_Public {
 					</div>
 		
 					<div class="mailchimp-newsletter__loading-wrapper fn-loading-wrapper">
-						<p class="mailchimp-newsletter__loading-wrapper__loading fn-loading-status">Lägger till ...</p>
+						<p class="mailchimp-newsletter__loading-wrapper__loading fn-loading-status">'. $adding_text .' ...</p>
 					</div>
 				</div>
 			';
